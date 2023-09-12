@@ -20,9 +20,6 @@ class Agenda {
             console.log(this.agendamento[i]);
         }
     }
-    removerEvento(evento) {
-        this.agendamento = this.agendamento.filter(item => item.nome != evento.nome);
-    }
 }
 const evento1 = new Eventos("Casamento", "10/10/2023", "18:30");
 const evento2 = new Eventos("Batismo", "15/10/2023", "9:00");
