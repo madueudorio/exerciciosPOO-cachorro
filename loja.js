@@ -24,7 +24,7 @@ class CarrinhoCompras {
         return valorTotal.toFixed(2);
     }
 }
-class loja {
+class Loja {
     constructor() {
         this.estoqueProdutos = [];
         this.carrinho = new CarrinhoCompras();
@@ -46,5 +46,21 @@ class loja {
             return "Produto não encontrado no estoque";
         }
     }
+    removerProduto(produto) {
+        return this.carrinho.removerProduto(produto);
+    }
 }
+const produtoLoja1 = new ProdutoLoja("casa de boneca", 200);
+const produtoLoja2 = new ProdutoLoja("carrinho Hot Wheels", 82);
+const produtoLoja3 = new ProdutoLoja("sapato", 75);
+const produtoLoja4 = new ProdutoLoja("vestido", 186);
+const loja = new Loja();
+console.log(loja.adicionarProdutoEstoque(produtoLoja1));
+console.log(loja.adicionarProdutoEstoque(produtoLoja2));
+console.log(loja.adicionarProdutoEstoque(produtoLoja3));
+console.log(loja.adicionarProdutoEstoque(produtoLoja4));
+console.log(loja.adicionarProdutoNoCarrinho(produtoLoja1));
+console.log(loja.adicionarProdutoNoCarrinho(produtoLoja2));
+console.log(loja.adicionarProdutoNoCarrinho(produtoLoja3));
+console.log(loja.adicionarProdutoNoCarrinho(produtoLoja4));
 let produtoloja1 = new ProdutoLoja('Fita de Led', 37);
